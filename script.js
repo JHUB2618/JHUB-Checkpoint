@@ -1,37 +1,26 @@
-let checkpoint = 1;
-
-function goToCheckpoint() {
+// Checkpoint 1
+function startCheckpoint1() {
     const status = document.getElementById('status');
-    const button = document.getElementById('startButton');
-
-    if (checkpoint === 1) {
-        status.innerText = "Checkpoint 1 reached! Redirecting in 5 seconds...";
-        button.disabled = true;
-        setTimeout(() => {
-            // Replace with your first Linkvertise URL
-            window.location.href = "https://linkvertise.com/first-link";
-        }, 5000);
-        checkpoint++;
-    } else if (checkpoint === 2) {
-        status.innerText = "Checkpoint 2 reached! Redirecting in 5 seconds...";
-        button.disabled = true;
-        setTimeout(() => {
-            // Replace with your second Linkvertise URL
-            window.location.href = "https://linkvertise.com/second-link";
-        }, 5000);
-        checkpoint++;
-    } else if (checkpoint === 3) {
-        status.innerText = "All checkpoints completed!";
-        const keyButton = document.createElement('button');
-        keyButton.innerText = "Generate Key";
-        keyButton.onclick = generateKey;
-        document.body.appendChild(keyButton);
-        button.style.display = "none";
-    }
+    status.innerText = "Redirecting to Linkvertise in 5 seconds...";
+    setTimeout(() => {
+        window.location.href = "https://linkvertise.com/first-link?target=https://yourusername.github.io/two-checkpoints-site/checkpoint2.html";
+    }, 5000);
 }
 
+// Checkpoint 2
+function startCheckpoint2() {
+    const status = document.getElementById('status');
+    status.innerText = "Redirecting to Linkvertise in 5 seconds...";
+    setTimeout(() => {
+        window.location.href = "https://linkvertise.com/second-link?target=https://yourusername.github.io/two-checkpoints-site/generatekey.html";
+    }, 5000);
+}
+
+// Generate Key
 function generateKey() {
-    const keyDisplay = document.createElement('p');
-    keyDisplay.innerText = "Your key: JHUB_016391";
-    document.body.appendChild(keyDisplay);
+    const keyDisplay = document.getElementById('keyDisplay');
+    keyDisplay.innerText = "JHUB_016391";
+
+    // Optional: redirect after showing key
+    // setTimeout(() => { window.location.href = "https://yourusername.github.io/two-checkpoints-site/thankyou.html"; }, 5000);
 }

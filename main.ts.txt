@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Checkpoints + Key Generator</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<h1>Two Checkpoints + Key Generator Demo</h1>
+<p id="status">Press the button to start the process.</p>
+<button id="startButton" onclick="goToCheckpoint()">Start</button>
+</body>
+</html>
